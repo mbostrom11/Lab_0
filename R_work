@@ -1,0 +1,71 @@
+---
+title: "Practice_Lab"
+author: "Marco Bostrom"
+date: "4/7/2020"
+output: html_document
+---
+
+
+## R Markdown
+
+First, let's make sure you know how to use R Markdown.
+
+**Make this text bold.**
+
+_Make this text italicized._
+
+Make these into a bullet point list:
+
+* Apples
+* Bananas
+* Potatoes
+
+Make it so this chunk shows the plot, but not the source code:
+
+```{r, echo=FALSE}
+plot(1:10)
+```
+
+Make it so this chunk shows the code, but not the output:
+
+```{r,results='hide'}
+2 + 2
+```
+
+Make it so the file can still knit even though this chunk has an error
+
+```{r, error= TRUE}
+2 + a
+```
+
+## Getting to know your classmates
+
+1. Find someone in the class who has a different major than you.  Tell us their name and why they chose that major.
+
+Karan Bhatia is a buisness major who has a minor in statistics and chose this major because he is intrested in buisness and the analytical and quantitive side of finance.
+
+2. Find someone who took Stat 331 from a different professor than you.  Compare your experiences.  Tell us their name and professor.  List one or two things that you think you learned more about, and one or two things that they learned more about.
+
+Andrew Harlow is one of my classmates who had Bodwin as a teacher who learned useful information especially in regards to statistical tests. With this class Andrew hopes to learn more about ggplot especially in regards to more uncommon and advanced features of it. Andrew learned that I had proffessor Frame and would like more in regards to data scraping.
+
+3. Find someone in the class who does not share your birth month.  Tell us their name and birthday, and use R to find out how many days apart your birthdays are.
+
+Sahil Bobba August 18 - Marco Bostrom November 11
+```{r, error= TRUE}
+survey <- data.frame(date=c("1999/08/18"),tx_start=c("1998/11/11"))
+survey$diff_1 <- as.numeric(
+  as.Date(as.character(survey$date), format="%Y/%m/%d")-
+  as.Date(as.character(survey$tx_start), format="%Y/%m/%d")
+)
+survey$diff_1
+```
+
+
+4. Pick someone in the class who you don't already know.  Ask them for a story of the strangest thing that ever happened in a class they took.  Share their story (but not their name) here.
+
+One of the students in this class once had a teacher just stop showing up in highschool near the end of the year and it was not until a week later that they found out he had been arrested for stealing money from school funds.
+
+
+
+
+
